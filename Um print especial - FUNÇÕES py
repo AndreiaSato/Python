@@ -1,0 +1,13 @@
+#FAÇA UM PROGRAMA QUE TENHA UMA FUNÇÃO CHAMADA ESCREVA (), QUE RECEBA UM TEXTO QUALQUER COMO PARÂMETRO E MOSTRE UMA
+#MENSAGEM COM TAMANHO ADAPTÁVEL.
+
+
+def escreva(txt):
+    tam = len(txt)
+    print('=' * tam)
+    print(txt)
+    print('=' * tam)
+txt = str(input('escreva: '))
+
+escreva(txt)
+

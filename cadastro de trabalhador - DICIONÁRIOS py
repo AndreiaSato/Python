@@ -1,0 +1,18 @@
+# CRIE UM PROGRAMA QUE LEIA NOME, ANO DE NASCIMENTO E CARTEIRA DE TRABALHO E CADASTRE-O (COM IDADE EM UM DICIONÁRIO.
+# SE POR ACASO A CTPS FOR DIFERENTE DE ZERO, O DICIONÁRIO RECEBERÁ TBM O ANO DE CONTRATAÇÃO E O SALÁRIO. CALCULE E ACRESCENTE,
+# ALÉM DA IDADE, COM QTS ANOS A PESSOA VAI SE APOSENTAR.
+
+from datetime import datetime
+dados = dict()
+dados['nome']= str(input('nome: '))
+nasc = int(input('Ano de Nascimento: '))
+dados['idade'] = datetime.now().year - nasc
+dados['ctps']= int(input('carteira de trbalho (0  NÃO TEM):' ))
+if dados['ctps'] != 0:
+    dados['contratação']= int(input('Ano de contratação: '))
+    dados['salario']= int(input('Qual salário: R$'))
+    dados['aposentadoria']= dados['idade'] + (dados['contratação'] + 35) - datetime.now().year
+print('+'*35)
+for k,v in dados.items():
+    print(f'- {k} :  {v}')
+print('+'*35)

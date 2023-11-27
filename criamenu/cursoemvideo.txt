@@ -1,0 +1,4 @@
+Andréia;40
+Bianca ;15
+Nicole;13
+gabriel;41
